@@ -8,7 +8,7 @@ exec (bin + ' --version', function (err, res) {
   }
 
   res.replace (/vnStat\ (\d+\.\d+)/, function (s, version) {
-    if (version >= 1.13) {
+    if (parseFloat(version) >= 1.13) {
       return;
     }
 
